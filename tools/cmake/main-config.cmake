@@ -1,0 +1,6 @@
+include(tools/cmake/CompilerWarnings.cmake)
+include(tools/cmake/Errors.cmake)
+include(tools/cmake/PVS-Studio-conf.cmake)
+include(tools/cmake/Sanitizers.cmake)
+include(tools/cmake/Windows.cmake)
+include(tools/cmake/Defaults.cmake)

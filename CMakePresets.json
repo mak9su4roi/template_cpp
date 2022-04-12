@@ -1,0 +1,37 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "base",
+            "displayName": "Base Configure Preset",
+            "description": "^=^",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/tools/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/build/bin",
+                "CMAKE_CXX_STANDARD": "17",
+                "PROJECT_NAME": "option-parser",
+
+                "WARNINGS_AS_ERRORS": false,
+                "ENABLE_PVS_STUDIO": false,
+                "ENABLE_UBSan": false,
+                "ENABLE_ASAN": false,
+                "ENABLE_TSan": false,
+                "ENABLE_MSAN": false
+
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "base",
+            "description": "0^0",
+            "displayName": "",
+            "configurePreset": "base",
+             "jobs": 8
+        }
+    ]
+}
