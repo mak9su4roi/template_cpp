@@ -14,7 +14,7 @@ Variant: <mark>The One And Only</mark>
     cd template_cpp
     ```
 -   ```bash
-    git clone --recurse-submodules
+    git submodule init && git submodule update
     ```
 -   ```bash
     tools/vcpkg/bootstrap-vcpkg.sh
