@@ -14,14 +14,12 @@
                 "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/build/bin",
                 "CMAKE_CXX_STANDARD": "17",
                 "PROJECT_NAME": "option-parser",
-
                 "WARNINGS_AS_ERRORS": false,
                 "ENABLE_PVS_STUDIO": false,
                 "ENABLE_UBSan": false,
                 "ENABLE_ASAN": false,
                 "ENABLE_TSan": false,
                 "ENABLE_MSAN": false
-
             }
         }
     ],
@@ -31,7 +29,15 @@
             "description": "0^0",
             "displayName": "",
             "configurePreset": "base",
-             "jobs": 8
+            "jobs": 8
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "base",
+            "description": "0w0",
+            "displayName": "",
+            "configurePreset": "base"
         }
     ]
 }

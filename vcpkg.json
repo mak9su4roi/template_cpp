@@ -3,6 +3,8 @@
     "version-string": "1.0",
     "dependencies": [
         "boost-program-options",
-        "boost-system"
+        "boost-system",
+        "gtest",
+        "benchmark"
     ]
 }
