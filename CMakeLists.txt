@@ -17,8 +17,8 @@ include(tools/cmake/CompilerWarnings.cmake)
 ##########################################################
 
 #! Project main executable source compilation
-add_executable(${PROJECT_NAME} src/main.cpp
-				src/options_parser/options_parser.cpp src/options_parser/options_parser.h)
+add_executable(${PROJECT_NAME} src/main.cc
+				src/options_parser/options_parser.cc src/options_parser/options_parser.h)
 
 #! Put path to your project headers
 target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
@@ -26,6 +26,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
 #! Add external packages
 # options_parser requires boost::program_options library
 find_package(Boost 1.71.0 COMPONENTS program_options system REQUIRED)
+target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} PRIVATE Boost::program_options Boost::system)
 
 						
